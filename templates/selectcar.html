@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+		<style type="text/css">
+			#floatleft1 {float:right;margin-right:530px;}
+			#floatleft2 {float:left;margin-left:305px;}
+			#floatleft3 {float:left;margin-left:315px;}
+		</style>
+
+		<title>
+			Pick a Car
+		</title>
+    	</head>
+    	<body style="font-family:Lucida Sans">
+	<form method="POST" action="/cnfbooking">
+                	{% for key, value in booking_details.items() %}
+                	<input type="hidden" id="slider_input" name="{{key}}" value={{value}}>
+                	{% endfor %}
+                                        
+                	<h1 class="jumbotron">Pick a Car,<span style="font-family:Comic Sans Ms"><b> {{booking_details['username']}}</b></span>!</h1>
+
+		    	{% if cars %}
+                	<h1>Available Cars</h1>
+                	<table class="table table-hover" style="width:90%" >
+				<thead class="thead-light" align="center">
+					<th>Car-Registration-no.</th>
+					<th>Availablity-status</th>
+				</thead>
+                    {% for files in cars%}
+                    <tr align="center">
+				<td align="left">
+					<input 
+					type="radio"
+					name="car_registration_no" value="{{files[0]}}"> <span id="floatleft1">{{files[0]}}</span>
+                    	</td>
+				<td>
+					{{files[1]}}
+				</td>
+                    </tr>
+                    
+                    {% endfor %}
+                </table>
+		    <button onclick="submit" class="btn btn-success offset-sm-2"><h3>Confirm Booking</h3></button>
+                {% else %}
+                <h1>No cars Available</h1>
+
+
+
+                {% endif %}
+
+            
+	
+        
+        </form>
+        <br></br>
+
+	  
+	  <button id="floatleft2" class="col-sm-1 btn btn-secondary offset-sm-2" onclick="location.href='javascript:history.back()'">Go Back</button>
+	
+	<br><br></br>
+
+	  <button id="floatleft3" type="button" class="btn btn-danger" onclick="location.href='/'"><h4>Log out</h4></button>
+    </body>
+</html>

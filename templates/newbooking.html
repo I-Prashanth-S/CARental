@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+		<style type="text/css">
+			#floatright1 {float:right;margin-right:800px;} 
+			#floatright2 {float:right;margin-right:700px;} 
+		</style>
+		
+		
+    </head>
+    
+    <body style="font-family:comic sans ms">
+
+		<h1 class="jumbotron"><strong>New Booking</strong></h1>
+
+            <form method="POST" action="/selectcar">
+			<input type="hidden" id="slider_input" name="username" value={{username}}>
+			
+			<h2>Choose Car</h2>
+			<br>
+			
+			<select name="category" class="dropdown">
+				<option selected><h3>Choose your type of Car</h3></option>
+				<option value="micro" > Micro<br>
+				<option value="mini" checked> Mini<br>
+				<option value="sedan"> Sedan<br>
+				<option value="suv"> SUV<br>	
+			</select>
+
+			<br></br>
+
+			<div div id="floatright1">
+				<h3>Renting within</h3>
+				<input type="radio" name="is_local" value="Yes"> Local<br>
+				<input type="radio" name="is_local" value="No" checked> Outstation<br>
+			</div>
+                
+                <h3>Insurance reqirement</h3>
+                <input type="radio" name="is_insured" value="Yes" checked> Yes<br>
+                <input type="radio" name="is_insured" value="No" > No<br>
+                
+                
+                
+                <br>
+                <label id=>
+                        Pickup_date:
+                         <input type="text" name="pickup_date">
+                </label>
+
+		    
+		    <div id = "floatright2">
+                <label>
+                        Pickup_time:
+                         <input type="text" name="pickup_time">
+                </label>
+			</div>
+                <br>
+                <label>
+                        Return_date:
+                         <input type="text" name="expected_return_date">
+                </label>
+
+                
+
+
+
+
+                <br></br>
+                <button class="btn btn-primary btn" onclick="submit"><h1>See available cars</h1></button>
+		</form>
+		<br></br> 	
+		<button type="button" class="btn btn-danger" onclick="location.href='/'"><h4>Log out</h4></button>
+    </body>
+</html>

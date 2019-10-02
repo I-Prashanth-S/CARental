@@ -1,0 +1,117 @@
+<!Doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+		<h1 class="jumbotron" style="font-family:Lucida Sans">Register</h1>
+		<title>
+			Signup-page
+		</title>
+		<link rel="stylesheet" type="text/css" >
+	    </head>
+	    
+	
+    <body >	
+		<form method="POST" action="/signup" >
+			<div class="form-group row">
+				<label for="username" class="col-sm-2 col-form-label "">
+					Username:
+				</label>
+				<div class="col-sm-5">
+                			<input type="text" class="form-control" placeholder="Enter your name" name="username" id="username">
+				</div>
+			</div>
+			
+			<div class="form-group row">
+				<label for="first_name" class="col-sm-2 col-form-label "">
+					First Name:
+				</label>
+				<div class="col-sm-5">
+                			<input type="text" class="form-control" placeholder="Enter your First name" name="first_name" id="firstname">
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label for="middle_name" class="col-sm-2 col-form-label "">
+					Middle Name:
+				</label>
+				<div class="col-sm-5">
+                			<input type="text" class="form-control" placeholder="Enter your Middle name(optional)" name="middle_name" id="middlename">
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label for="last_name" class="col-sm-2 col-form-label "">
+					Last Name:
+				</label>
+				<div class="col-sm-5">
+                			<input type="text" class="form-control" placeholder="Enter your Last name" name="last_name" id="lastname">
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label for="drivinglicense_no" class="col-sm-2 col-form-label "">
+					Driving License:
+				</label>
+				<div class="col-sm-5">
+                			<input type="text" class="form-control" placeholder="Enter your Driving license" name="driving_license_no" id="drivinglicense">
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label for="password" class="col-sm-2 col-form-label "">
+					Password:
+				</label>
+				<div class="col-sm-5">
+						<input type="text" class="form-control" placeholder="Enter your password(10 char min)" name="password" id="password">
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label for="emailid" class="col-sm-2 col-form-label "">
+					Email ID:
+				</label>
+				<div class="col-sm-5">
+						<input type="text" class="form-control" placeholder="Enter your email-id" name="email_id" id="emailid">
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label for="phonenumber1" class="col-sm-2 col-form-label "">
+						Phone Number 1:
+				</label>
+				<div class="col-sm-5">
+						<input type="text" class="form-control" placeholder="Enter your phone number" name="phonenumber1" id="phonenumber1">
+				</div>
+			</div>
+
+      		<div class="form-group row">
+				<label for="phonenumber2" class="col-sm-2 col-form-label "">
+						Phone Number 2:
+				</label>
+				<div class="col-sm-5">
+						<input type="text" class="form-control" placeholder="Enter your second phone number" name="phonenumber2" id="phonenumber2">
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label for="Address" class="col-sm-2 col-form-label "">
+						Address:
+				</label>
+				<div class="col-sm-5">
+						<input type="text" class="form-control" placeholder="Enter your Address" name="customer_address" id="Address">
+				</div>
+			</div>
+
+		<div class="form-group row">
+			<div class="col-sm-10 offset-sm-2">
+				<button type="submit" class="btn btn-primary">Sign up</button>
+			</div>
+		</div>
+            <!-- <input type="submit" value="Submit"/> -->
+        </form>
+    </body>
+</html>

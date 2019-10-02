@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+
+	<style type="text/css">
+		#element1 {
+			display: inline-block;
+			margin-right: 10px;
+		}
+
+		#element2 {
+			display: inline-block;
+		}
+	</style>
+
+	<meta charset="UTF-8">
+	<title>Car Rental System</title>
+</head>
+
+<body style="font-family:comic sans ms">
+	<div>
+		<h1 class="jumbotron">Welcome to Online Car Rental System</h1>
+	</div>
+	<div id="element1">
+		<a class="btn btn-primary btn" role="buttton" href="/signin">Sign in</a>
+	</div>
+
+	<div id="element2">
+		<a class="btn btn-primary btn" role="buttton" href="/signup">Sign up</a>
+	</div>
+</body>
+
+<script>
+	var head = document.querySelector(".jumbotron");
+	setInterval(()=>{
+		letters = "0123456789ABCDEF"
+		col = "#"
+		for(i = 0;i< 6;i++) {
+			col += letters[Math.floor(Math.random() * 16)];
+		}
+		console.log(col);
+		head.style.color = col;
+	},500)
+</script>
+
+</html>
